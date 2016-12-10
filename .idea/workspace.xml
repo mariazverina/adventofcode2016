@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1f8ed379-e904-478b-99a1-262e375a2789" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/day8.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/day8.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/day7.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/day7.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -29,6 +29,16 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="day7.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/day7.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="345">
+              <caret line="40" column="29" lean-forward="false" selection-start-line="40" selection-start-column="29" selection-end-line="40" selection-end-column="29" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="day8.txt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/day8.txt">
           <provider selected="true" editor-type-id="text-editor">
@@ -39,11 +49,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="day8.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="day8.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/day8.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="75">
               <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="day7.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/day7.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="527">
+              <caret line="1999" column="56" lean-forward="false" selection-start-line="1999" selection-start-column="56" selection-end-line="1999" selection-end-column="56" />
               <folding />
             </state>
           </provider>
@@ -61,6 +81,7 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>61) 17</find>
+      <find>gcg</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -78,6 +99,8 @@
         <option value="$PROJECT_DIR$/day9.py" />
         <option value="$PROJECT_DIR$/day8.txt" />
         <option value="$PROJECT_DIR$/day8.py" />
+        <option value="$PROJECT_DIR$/day7.txt" />
+        <option value="$PROJECT_DIR$/day7.py" />
       </list>
     </option>
   </component>
@@ -123,24 +146,7 @@
       <pane id="Scope" />
     </panes>
   </component>
-  <component name="RunManager" selected="Python.day8">
-    <configuration default="false" name="day1" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="aoc2016" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/day1.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Python.day7">
     <configuration default="false" name="day10" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -205,6 +211,23 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="aoc2016" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/day8.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="day7" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="aoc2016" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/day7.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -344,19 +367,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python.day1" />
-      <item index="1" class="java.lang.String" itemvalue="Python.day10" />
-      <item index="2" class="java.lang.String" itemvalue="Python.day25" />
-      <item index="3" class="java.lang.String" itemvalue="Python.day9" />
-      <item index="4" class="java.lang.String" itemvalue="Python.day8" />
+      <item index="0" class="java.lang.String" itemvalue="Python.day10" />
+      <item index="1" class="java.lang.String" itemvalue="Python.day25" />
+      <item index="2" class="java.lang.String" itemvalue="Python.day9" />
+      <item index="3" class="java.lang.String" itemvalue="Python.day8" />
+      <item index="4" class="java.lang.String" itemvalue="Python.day7" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.day8" />
-        <item index="1" class="java.lang.String" itemvalue="Python.day9" />
-        <item index="2" class="java.lang.String" itemvalue="Python.day25" />
-        <item index="3" class="java.lang.String" itemvalue="Python.day10" />
-        <item index="4" class="java.lang.String" itemvalue="Python.day1" />
+        <item index="0" class="java.lang.String" itemvalue="Python.day7" />
+        <item index="1" class="java.lang.String" itemvalue="Python.day8" />
+        <item index="2" class="java.lang.String" itemvalue="Python.day9" />
+        <item index="3" class="java.lang.String" itemvalue="Python.day25" />
+        <item index="4" class="java.lang.String" itemvalue="Python.day10" />
       </list>
     </recent_temporary>
   </component>
@@ -375,9 +398,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="131" y="23" width="1400" height="942" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3298969" sideWeight="0.16" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -460,6 +483,22 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/day8.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/day7.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="1999" column="56" lean-forward="false" selection-start-line="1999" selection-start-column="56" selection-end-line="1999" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/day25.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -468,10 +507,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/day8.py">
+    <entry file="file://$PROJECT_DIR$/day7.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+        <state relative-caret-position="345">
+          <caret line="40" column="29" lean-forward="false" selection-start-line="40" selection-start-column="29" selection-end-line="40" selection-end-column="29" />
           <folding />
         </state>
       </provider>
