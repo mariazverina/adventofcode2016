@@ -3,12 +3,6 @@ import re
 with open(__file__[:-2]+"txt", "r") as f:
     lines = map(str.strip, f.readlines())
 
-# lines = ['abbabba[mnop]qrst', 'abcd[bddb]xyyx', 'aaaa[qwer]tyui', 'ioxxoj[asdfgh]zxcvbn']
-
-# lines = """aba[bab]xyz
-# xyx[xyx]xyx
-# aaa[kek]eke
-# zazbz[bzb]cdb""".split()
 
 def has_abba(token):
     if len(token) < 4:
