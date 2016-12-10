@@ -8,7 +8,6 @@ def rotate(args):
     offset = int(args[3])
     ix = int(args[1].split('=')[1])
 
-    print "rotate", args[0], ix, offset
     if args[0] == "row":
         disp[ix, :] = np.roll(disp[ix, :], offset)
     else:
@@ -17,7 +16,6 @@ def rotate(args):
 
 def rect(args):
     width, height = map(int, args[0].split('x'))
-    print "rect", width, height
     disp[:height, :width] = 1
 
 FUNMAP = {'rotate' : rotate, 'rect' : rect}
