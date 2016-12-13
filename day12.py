@@ -3,26 +3,38 @@ import inspect
 with open(__file__[:-2]+"txt", "r") as f:
     lines = map(str.split, f.readlines())
 
+def parse_ints(xs):
+    for i in range(len(xs)):
+        try:
+            xs[i] = int(xs[i])
+        except:
+            pass
+
+map(parse_ints, lines)
 print lines
+
 
 registers = dict(zip(list("abcd"), [0]*4))
 pc = 0
 
+
 def value(reg_or_literal):
-    if reg_or_literal in registers:
-        x = registers[reg_or_literal]
-    else:
-        x = int(reg_or_literal)
-    return x
+    if isinstance(reg_or_literal, str):
+        return registers[reg_or_literal]
+    return reg_or_literal
+
 
 def cpy(*params):
     registers[params[1]] = value(params[0])
 
+
 def inc(*params):
     registers[params[0]] += 1
 
+
 def dec(*params):
     registers[params[0]] -= 1
+
 
 def jnz(*params):
     global pc
@@ -38,7 +50,9 @@ while True:
         print registers
         break
     word = lines[pc]
+    # print word
     instructions[word[0]](*word[1:])
+    # print registers, pc
     pc += 1
 
 
