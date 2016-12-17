@@ -3,9 +3,9 @@ import re
 import string
 
 with open(__file__[:-2]+"txt", "r") as f:
-    lines = map(str.strip, f.readlines())
+    lines = list(map(str.strip, f.readlines()))
 
-print lines
+print(lines)
 
 s = 0
 
@@ -18,14 +18,14 @@ for line in lines:
     name, id, checksum = re.match(r'(\D+)-(\d+)\[(.*?)\]', line).groups()
     name = re.sub('-', '', name)
 
-    k = ''.join(zip(*sorted(Counter(name).most_common(), key=lambda (a,b):(-b,a))[:5])[0])
+    k = ''.join(zip(*sorted(Counter(name).most_common(), key=lambda a_b:(-a_b[1],a_b[0]))[:5])[0])
     if k == checksum:
 
-        print string.translate(line, rot_dicts[int(id) % 26]), line, k
+        print(string.translate(line, rot_dicts[int(id) % 26]), line, k)
 
         s += int(id)
 
-print s
+print(s)
 
 
 

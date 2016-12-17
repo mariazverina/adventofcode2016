@@ -37,14 +37,11 @@ class Robot:
     def __repr__(self):
         return repr((self.id, self.low, self.high, self.value1))
 
-    def __cmp__(self, other):
-        return self.id.__cmp__(other.id)
-
     def push(self, value):
         if self.value1 is None:
             self.value1 = value
             return
-        print self, value
+        print(self, value)
         troupe.load_value(min(value, self.value1), self.low, self.iolow)
         troupe.load_value(max(value, self.value1), self.high, self.iohigh)
 
@@ -52,16 +49,17 @@ class Robot:
 
 
 with open("day10.txt", "r") as f:
-    lines = map(str.strip, f.readlines())
+    lines = list(map(str.strip, f.readlines()))
 
 troupe = RobotTroupe()
 values = [Value(x) for x in lines if x[0] == 'v']
-print values
+print(values)
 bots = [Robot(x, troupe) for x in lines if x[0] == 'b']
-print sorted(bots)
+print(sorted(bots, key=lambda r:r.id))
+
 
 for v in values:
     troupe.load_value(v.val, v.bot, False)
 
-print troupe.io
-print troupe.io[0] * troupe.io[1] * troupe.io[2]
+print(troupe.io)
+print(troupe.io[0] * troupe.io[1] * troupe.io[2])

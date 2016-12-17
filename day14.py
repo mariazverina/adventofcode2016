@@ -8,9 +8,9 @@ MD5_CACHE = {}
 PENTUPLES = {}
 
 def ntuple(s, n):
-    tuples = zip(*[s[x:] for x in range(n)])
+    tuples = list(zip(*[s[x:] for x in range(n)]))
     same_tups = [t for t in tuples if all([c == t[0] for c in t])]
-    return map(lambda x:x[0], same_tups)
+    return [x[0] for x in same_tups]
 
 def pentuples(s):
     global PENTUPLES
@@ -28,15 +28,15 @@ def md5(s):
     d = s
     for i in range(2017):
         h = hashlib.md5()
-        h.update(d)
+        h.update(d.encode())
         d = h.hexdigest()
     MD5_CACHE[s] = d
     return d
 
 hh = md5('abc18')
-print hh
-print ntuple(hh, 3)
-print ntuple(hh, 5)
+print(hh)
+print(ntuple(hh, 3))
+print(ntuple(hh, 5))
 
 keys = []
 i = 0
@@ -48,7 +48,7 @@ while True:
             zs = pentuples(md5(salt + str(i + j)))
             if ks[0] in zs:
                 keys.append((i, ks, zs))
-                print keys
+                print(keys)
                 break
     if len(keys) == 64:
         break
@@ -56,4 +56,4 @@ while True:
     i += 1
     # print i
 
-print keys
+print(keys)

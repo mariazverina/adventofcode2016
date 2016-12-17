@@ -27,4 +27,4 @@ def file_len(line):
     return total_len
 
 
-print file_len(line)
+print(file_len(line))

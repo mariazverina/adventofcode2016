@@ -1,3 +1,4 @@
+from functools import reduce
 
 
 # north is 0, east is 1 ....
@@ -23,14 +24,14 @@ with open("day1.txt", "r") as f:
     line = f.readline()
 
 tokens = line.split(", ")
-instructions = map(lambda x:(x[0], int(x[1:])), tokens)
+instructions = [(x[0], int(x[1:])) for x in tokens]
 
 # part 1
 h, dist_matrix =  reduce(apply, instructions, (0, [0,0,0,0]))
-print abs(dist_matrix[0] - dist_matrix[2]) + abs(dist_matrix[1] - dist_matrix[3])
+print(abs(dist_matrix[0] - dist_matrix[2]) + abs(dist_matrix[1] - dist_matrix[3]))
 
 # part 2
-print instructions
+print(instructions)
 
 direction = 0
 visited = set((0, 0))
@@ -43,15 +44,15 @@ for (turn, distance) in instructions:
     for d in range(1, distance + 1):
         point = x + d * a, y + d * b
         if point in visited:
-            print point, sum(map(abs,point))
+            print(point, sum(map(abs,point)))
             exit(0)
         else:
             visited.add(point)
-        print point
+        print(point)
     location = point
 
 
-print visited
+print(visited)
     # print direction, distance
 
 

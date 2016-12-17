@@ -1,6 +1,6 @@
 import numpy as np
 with open(__file__[:-2]+"txt", "r") as f:
-    lines = map(str.strip, f.readlines())
+    lines = list(map(str.strip, f.readlines()))
 
 disp = np.zeros((6,50))
 
@@ -15,7 +15,7 @@ def rotate(args):
 
 
 def rect(args):
-    width, height = map(int, args[0].split('x'))
+    width, height = list(map(int, args[0].split('x')))
     disp[:height, :width] = 1
 
 FUNMAP = {'rotate' : rotate, 'rect' : rect}
@@ -24,6 +24,6 @@ for line in lines:
     words = line.split(" ")
     FUNMAP[words[0]](words[1:])
 
-print sum(sum(disp))
-print '\n'.join([''.join(map(lambda x:'X' if x else '.', row) ) for row in disp])
+print(sum(sum(disp)))
+print('\n'.join([''.join(['X' if x else '.' for x in row] ) for row in disp]))
 

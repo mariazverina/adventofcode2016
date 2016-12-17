@@ -1,5 +1,5 @@
 with open(__file__[:-2]+"txt", "r") as f:
-    lines = map(str.strip, f.readlines())
+    lines = list(map(str.strip, f.readlines()))
 
 KEYPAD = ["  1  ", " 234 ", "56789", " ABC ", "  D  "]
 
@@ -37,4 +37,4 @@ class Digit:
 
 d = Digit()
 for line in lines:
-    print d.decode(line)
+    print(d.decode(line))

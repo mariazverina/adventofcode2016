@@ -7,7 +7,7 @@
 
 
 floors = ["PoG TmG TmM PrG RuG RuM CoG CoM".split(), "PoM PrM".split(), [], []]
-print floors
+print(floors)
 
 
 # ended up using pen and paper

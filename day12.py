@@ -1,7 +1,7 @@
 import inspect
 
 with open(__file__[:-2]+"txt", "r") as f:
-    lines = map(str.split, f.readlines())
+    lines = list(map(str.split, f.readlines()))
 
 def parse_ints(xs):
     for i in range(len(xs)):
@@ -10,11 +10,11 @@ def parse_ints(xs):
         except:
             pass
 
-map(parse_ints, lines)
-print lines
+list(map(parse_ints, lines))
+print(lines)
 
 
-registers = dict(zip(list("abcd"), [0]*4))
+registers = dict(list(zip(list("abcd"), [0]*4)))
 pc = 0
 
 
@@ -41,18 +41,18 @@ def jnz(*params):
     if value(params[0]) != 0:
         pc += int(params[1]) - 1 # subtract one because pc is always incremented
 
-instructions = dict(zip("cpy inc dec jnz".split(), [cpy, inc, dec, jnz]))
+instructions = dict(list(zip("cpy inc dec jnz".split(), [cpy, inc, dec, jnz])))
 
 registers['c'] = 1
 
 while True:
     if pc >= len(lines) and pc < 100:
-        print registers
+        print(registers)
         break
     word = lines[pc]
     # print word
     instructions[word[0]](*word[1:])
-    # print registers, pc
+    print(registers, pc)
     pc += 1
 
 
