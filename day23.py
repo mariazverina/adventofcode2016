@@ -4,6 +4,7 @@ with open(__file__[:-2]+"txt", "r") as f:
     lines = list(map(str.split, f.readlines()))
 
 
+# machine state
 registers = dict(list(zip(list("abcd"), [0]*4)))
 pc = 0
 
@@ -51,9 +52,12 @@ def tgl(*params):
         return
     lines[ipc][0] = toggle_map[lines[ipc][0]]
 
+# microcode
 instructions = dict(list(zip("cpy inc dec jnz tgl add zer mul".split(), [cpy, inc, dec, jnz, tgl, add, zer, mul])))
 toggle_map = {cpy: jnz, jnz: cpy, inc: dec, dec: inc, tgl: inc}
 
+
+# convert strings to ints and functions calls to speed up execution
 def precompile(xs):
     global instructions
     xs[0] = instructions[xs[0]]
@@ -62,15 +66,17 @@ def precompile(xs):
             xs[i] = int(xs[i])
         except:
             pass
+    return xs
 
 
-list(map(precompile, lines))
+lines = list(map(precompile, lines))
 print(lines)
 
 registers['a'] = 12
 
+# run loop
 while True:
-    if pc >= len(lines) and pc < 100:
+    if pc >= len(lines):
         print(registers)
         break
     word = lines[pc]
